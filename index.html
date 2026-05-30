@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sudoku · DIO</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1>SUDOKU</h1>
+      <p>Projeto DIO · Resolva o quebra-cabeça</p>
+    </header>
+
+    <div class="game-area">
+
+      <div class="status-bar">
+        <div class="stat">
+          <div class="stat-val" id="timer">00:00</div>
+          <div class="stat-lbl">Tempo</div>
+        </div>
+        <div class="stat">
+          <div class="stat-val" id="errors-count">0</div>
+          <div class="stat-lbl">Erros</div>
+        </div>
+        <div class="stat">
+          <div class="stat-val" id="filled-count">0</div>
+          <div class="stat-lbl">Preenchidas</div>
+        </div>
+      </div>
+
+      <div class="board-wrap">
+        <div class="board" id="board"></div>
+      </div>
+
+      <div class="numpad" id="numpad"></div>
+
+      <div class="controls">
+        <button class="ctrl-btn" id="btn-check">✓ Verificar</button>
+        <button class="ctrl-btn" id="btn-hint">💡 Dica</button>
+        <button class="ctrl-btn" id="btn-reset">↺ Reiniciar</button>
+        <button class="ctrl-btn primary" id="btn-solve">✦ Resolver</button>
+      </div>
+
+      <div class="victory" id="victory">
+        <div class="trophy">🏆</div>
+        <h2>Parabéns!</h2>
+        <p id="victory-msg">Você completou o Sudoku!</p>
+        <button class="ctrl-btn primary" id="btn-again">Jogar novamente</button>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="toast" id="toast"></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/game.js"></script>
+</body>
+</html>
